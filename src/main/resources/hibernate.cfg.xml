@@ -5,13 +5,13 @@
   		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
   		<property name="hibernate.show.sql">false</property>
   
-        <mapping class="nedis.study.jee.entities.Account"/>
-		<mapping class="nedis.study.jee.entities.AccountRegistration"/>
-		<mapping class="nedis.study.jee.entities.AccountRole"/>
-		<mapping class="nedis.study.jee.entities.Answer"/>
-		<mapping class="nedis.study.jee.entities.Question"/>
-		<mapping class="nedis.study.jee.entities.Role"/>
-		<mapping class="nedis.study.jee.entities.Test"/>
-		<mapping class="nedis.study.jee.entities.TestResult"/>
+        <mapping class="caim.study.jee.entities.Account"/>
+		<mapping class="caim.study.jee.entities.AccountRegistration"/>
+		<mapping class="caim.study.jee.entities.AccountRole"/>
+		<mapping class="caim.study.jee.entities.Answer"/>
+		<mapping class="caim.study.jee.entities.Question"/>
+		<mapping class="caim.study.jee.entities.Role"/>
+		<mapping class="caim.study.jee.entities.Test"/>
+		<mapping class="caim.study.jee.entities.TestResult"/>
     </session-factory>
 </hibernate-configuration>

@@ -8,7 +8,7 @@
 	</listener>
 	
 	<listener>
-		<listener-class>nedis.study.jee.listeners.InitContextListener</listener-class>
+		<listener-class>caim.study.jee.listeners.InitContextListener</listener-class>
 	</listener>
 
 	<context-param>
