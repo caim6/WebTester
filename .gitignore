@@ -1,0 +1,6 @@
+classes/
+target/
+.idea/
+.classpath
+.project
+study.*

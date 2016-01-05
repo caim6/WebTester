@@ -1,0 +1,53 @@
+.style1 .main {
+	text-align: center;
+	margin: 0 auto;
+	width: 1024px;
+	padding: 85px;
+
+}
+
+.style1 #loginForm table {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.style1 #loginForm table td {
+	text-align: left;
+}
+
+.style1 .errors {
+	color:red;
+	text-align: center;
+	font-weight: bold;
+}
+table {
+	table-layout: fixed;
+	align-content: center;
+}
+
+header{
+	position: absolute;
+	background-color: #F8F8F8;
+	height: 75px;
+	width: 100%;
+
+}
+
+footer{
+	position: fixed;
+	background-color: #F8F8F8;
+	height: 75px;
+	width: 100%;
+	right: 0; bottom: 0;
+	padding: 10px;
+
+}
+
+table td {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+} thead th{
+	text-align: center;
+}
+
