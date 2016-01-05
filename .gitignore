@@ -4,3 +4,4 @@ target/
 .classpath
 .project
 study.*
+src/main/webapp/WEB-INF/lib/*.jar
