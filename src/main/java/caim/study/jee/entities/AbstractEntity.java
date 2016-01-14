@@ -1,19 +1,15 @@
 package caim.study.jee.entities;
 
-import java.io.Serializable;
-
-import javax.persistence.MappedSuperclass;
-import javax.persistence.Transient;
-
 import org.apache.commons.lang.builder.CompareToBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
-/**
- * @author nedis
- * @version 1.0
- */
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
+import java.io.Serializable;
+
+
 @MappedSuperclass
 public abstract class AbstractEntity implements IEntity, Comparable<AbstractEntity> {
 	private static final long serialVersionUID = 9161447837905426010L;

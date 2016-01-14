@@ -1,19 +1,15 @@
 package caim.study.jee.dao.impl.hibernate;
 
-import java.io.Serializable;
-import java.util.List;
-
 import caim.study.jee.dao.IEntityDao;
-
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * @author nedis
- * @version 1.0
- */
+import java.io.Serializable;
+import java.util.List;
+
+
 @SuppressWarnings("unchecked")
 public abstract class AbstractEntityDao<T> implements IEntityDao<T> {
 	protected final Logger LOGGER = Logger.getLogger(getClass());

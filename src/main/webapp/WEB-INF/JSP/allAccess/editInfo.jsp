@@ -7,13 +7,7 @@
 <link rel="stylesheet" type="text/css" href="${context}/resources/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="${context}/resources/css/bootstrap-theme.css"/>
 
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 06.12.2015
-  Time: 12:17
-  To change this template use File | Settings | File Templates.
---%>
+
 <div class="container">
     <h2>Your Info</h2>
     <form:form class="form-horizontal" action="editInfoOk" commandName="userForm">

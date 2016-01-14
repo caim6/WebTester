@@ -7,13 +7,7 @@
 <link rel="stylesheet" type="text/css" href="${context}/resources/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="${context}/resources/css/bootstrap-theme.css"/>
 
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 02.12.2015
-  Time: 16:23
-  To change this template use File | Settings | File Templates.
---%>
+
 
     <h2>Please write email</h2>
     <form:form class="form-horizontal" action="/forgetOk" commandName="signUpForm">

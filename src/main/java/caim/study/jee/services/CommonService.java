@@ -12,10 +12,7 @@ import java.io.FileNotFoundException;
 import java.net.UnknownHostException;
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public interface CommonService {
 
 	Account login (String email, String password, int role) throws InvalidUserInputException;

@@ -19,9 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 //import com.restfb.Version;
 
-/**
- * Created by caim6 on 05.12.2015.
- */
 @Controller
 public class FacebookController extends AbstractController implements InitializingBean {
     @Value("${facebook.clientId}")

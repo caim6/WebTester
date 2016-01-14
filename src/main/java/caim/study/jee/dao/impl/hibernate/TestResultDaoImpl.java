@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * Created by caim6 on 11.11.2015.
- */
 @Repository("hibernateTestResultDao")
 @SuppressWarnings("unchecked")
 public class TestResultDaoImpl extends AbstractEntityDao<TestResult> implements TestResultDao {

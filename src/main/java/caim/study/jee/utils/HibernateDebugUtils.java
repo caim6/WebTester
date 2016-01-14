@@ -3,10 +3,7 @@ package caim.study.jee.utils;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public class HibernateDebugUtils {
 	
 	public static void turnOnShowSQL(){

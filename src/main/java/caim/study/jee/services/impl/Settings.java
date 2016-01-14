@@ -3,9 +3,7 @@ package caim.study.jee.services.impl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by caim6 on 02.12.2015.
- */
+
 @Service
 public class Settings {
 

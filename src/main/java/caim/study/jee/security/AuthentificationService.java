@@ -1,16 +1,9 @@
 package caim.study.jee.security;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import caim.study.jee.ApplicationConstants;
 import caim.study.jee.dao.AccountDao;
 import caim.study.jee.entities.Account;
 import caim.study.jee.entities.AccountRole;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,11 +12,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.*;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
+
 @Service("accountAuthentificationService")
 public class AuthentificationService implements UserDetailsService {
 	private static final Map<Integer, String> ROLES = new HashMap<Integer, String>();

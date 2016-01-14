@@ -1,11 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 23.12.2015
-  Time: 15:07
-  To change this template use File | Settings | File Templates.
---%>
+
 <jsp:include page="admTemplate.jsp"></jsp:include>
 <form:form class="form-horizontal" method="POST" commandName="adminForm">
     <h1>Your info</h1>

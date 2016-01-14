@@ -20,10 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Service
 public class TutorServiceImpl implements TutorService {
     @Autowired

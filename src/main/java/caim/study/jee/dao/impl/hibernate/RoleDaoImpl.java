@@ -5,10 +5,7 @@ import caim.study.jee.entities.Role;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Repository("hibernateRoleDao")
 public class RoleDaoImpl extends AbstractEntityDao<Role> implements RoleDao {
 

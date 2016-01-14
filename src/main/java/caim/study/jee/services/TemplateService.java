@@ -5,9 +5,7 @@ import javax.mail.MessagingException;
 import java.io.FileNotFoundException;
 import java.net.UnknownHostException;
 
-/**
- * Created by caim6 on 01.12.2015.
- */
+
 public interface TemplateService {
     String getTemplateForEmail(UserForm form, String filename) throws FileNotFoundException, UnknownHostException;
 

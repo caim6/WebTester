@@ -3,9 +3,7 @@ package caim.study.jee.services.impl;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-/**
- * Created by Дмитрий on 12.12.2015.
- */
+
 public class TestSessionInfo extends ArrayList<String> {
 
     private Integer correctAnswer;

@@ -3,10 +3,7 @@ package caim.study.jee.security;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Component("pwdEncoder")
 public class DefaultPasswordEncoder implements PasswordEncoder {
 

@@ -11,10 +11,7 @@ import javax.mail.internet.InternetAddress;
 import java.io.UnsupportedEncodingException;
 
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Service("emailService")
 public class EmailServiceStub implements EmailService {
 

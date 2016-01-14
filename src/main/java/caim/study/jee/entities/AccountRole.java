@@ -19,7 +19,7 @@ import javax.persistence.Transient;
  * The persistent class for the account_role database table.
  */
 @Entity
-@Table(name = "account_role", schema = "xgbua_web_tester")
+@Table(name = "account_role")
 public class AccountRole extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 

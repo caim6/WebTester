@@ -5,9 +5,6 @@ import caim.study.jee.forms.UserForm;
 
 import java.util.List;
 
-/**
- * Created by caim6 on 24.12.2015.
- */
 public class AdminForm extends UserForm {
     private Boolean confirmed = false;
     private Boolean active = false;

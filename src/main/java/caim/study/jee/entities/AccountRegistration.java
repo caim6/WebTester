@@ -7,7 +7,7 @@ import java.io.Serializable;
  * Created by caim6 on 11.11.2015.
  */
 @Entity
-@Table(name = "account_registration", schema = "xgbua_web_tester")
+@Table(name = "account_registration")
 public class AccountRegistration extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 

@@ -11,7 +11,7 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name="question", schema = "xgbua_web_tester")
+@Table(name="question")
 public class Question extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 

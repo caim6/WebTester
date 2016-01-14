@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -6,13 +6,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 27.11.2015
-  Time: 14:16
-  To change this template use File | Settings | File Templates.
---%>
 <div class="text-center col-md-10">
 
     <form:form class="form-horizontal" action="/signup/ok" commandName="signUpForm">

@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by caim6 on 06.12.2015.
- */
+
 @Controller
 public class AllAccessController extends AbstractController {
     @Autowired

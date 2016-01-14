@@ -5,13 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 06.12.2015
-  Time: 11:42
-  To change this template use File | Settings | File Templates.
---%>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">

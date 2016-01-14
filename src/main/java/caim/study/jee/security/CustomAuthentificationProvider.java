@@ -1,9 +1,6 @@
 package caim.study.jee.security;
 
-import javax.servlet.http.HttpServletRequest;
-
 import caim.study.jee.ApplicationConstants;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,10 +12,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-/**
- * @author nedis
- * @version 1.0
- */
+import javax.servlet.http.HttpServletRequest;
+
 @Component("customAuthenticationProvider")
 public class CustomAuthentificationProvider extends DaoAuthenticationProvider {
 

@@ -7,10 +7,7 @@ import caim.study.jee.entities.TestResult;
 
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public interface StudentService {
 
     List<Test> listAllTests(int page, int count);

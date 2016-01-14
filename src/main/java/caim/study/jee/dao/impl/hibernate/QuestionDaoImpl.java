@@ -10,9 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * Created by caim6 on 11.11.2015.
- */
+
 @Repository("hibernateQuestionDao")
 @SuppressWarnings("unchecked")
 public class QuestionDaoImpl extends AbstractEntityDao<Question> implements QuestionDao {

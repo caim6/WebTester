@@ -9,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Created by caim6 on 28.11.2015.
- */
+
 @Service("signUpService")
 public class SignUpServiceImpl implements SignUpService {
     @Autowired

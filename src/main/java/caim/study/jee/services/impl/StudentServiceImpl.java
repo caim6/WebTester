@@ -19,10 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Service
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class StudentServiceImpl implements StudentService {

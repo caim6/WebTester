@@ -6,9 +6,7 @@ import caim.study.jee.entities.Question;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Dmitrij on 24.11.2015.
- */
+ 
 public class TestPassForm implements IForm {
 
     private Question question;

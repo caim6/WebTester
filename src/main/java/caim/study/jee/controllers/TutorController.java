@@ -20,10 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Controller
 @RequestMapping("/tutor")
 public class TutorController extends AbstractTutorController {

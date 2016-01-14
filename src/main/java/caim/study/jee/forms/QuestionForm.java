@@ -4,9 +4,6 @@ import caim.study.jee.entities.Answer;
 
 import java.util.List;
 
-/**
- * Created by caim6 on 06.12.2015.
- */
 public class QuestionForm {
     private String name;
     private List<Answer> answers;

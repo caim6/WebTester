@@ -6,9 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-/**
- * Created by caim6 on 28.11.2015.
- */
+
 @Component("signUpFormValidator")
 public class SignUpFormValidator implements Validator{
 

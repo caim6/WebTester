@@ -8,13 +8,7 @@
 <link rel="stylesheet" type="text/css" href="${context}/resources/css/bootstrap-theme.css"/>
 
 
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 29.11.2015
-  Time: 21:08
-  To change this template use File | Settings | File Templates.
---%>
+
 <jsp:include page="../admin/admTemplate.jsp"></jsp:include>
 <h1> Users list</h1>
 <div class="col-sm-12">

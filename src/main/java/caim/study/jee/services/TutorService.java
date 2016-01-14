@@ -11,10 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public interface TutorService {
     List<Test> getTestList(Account account);
 

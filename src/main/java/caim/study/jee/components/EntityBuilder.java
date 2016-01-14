@@ -2,10 +2,7 @@ package caim.study.jee.components;
 
 import caim.study.jee.entities.*;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public interface EntityBuilder {
 
     Account buildAccount();

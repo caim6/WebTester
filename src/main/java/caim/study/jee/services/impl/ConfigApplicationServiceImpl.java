@@ -1,26 +1,30 @@
 package caim.study.jee.services.impl;
 
 import caim.study.jee.services.ConfigApplicationService;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-/**
- * @author nedis
- * @version 1.0
- */
-@Service
+
+@Service("configApplicationService")
 public class ConfigApplicationServiceImpl implements ConfigApplicationService {
 
-	@Value("${nedis.jee.study.supportEmailAddress}")
+	@Value("${caim.jee.study.supportEmailAddress}")
 	private String supportEmailAddress;
 	
-	@Value("${nedis.jee.study.cssJsVersion}")
+	@Value("${caim.jee.study.cssJsVersion}")
 	private String cssJsVersion;
 	
 	@Override
 	public String getSupportEmailAddress() {
 		return supportEmailAddress;
+	}
+
+	public void setSupportEmailAddress(String supportEmailAddress) {
+		this.supportEmailAddress = supportEmailAddress;
+	}
+
+	public void setCssJsVersion(String cssJsVersion) {
+		this.cssJsVersion = cssJsVersion;
 	}
 
 	@Override

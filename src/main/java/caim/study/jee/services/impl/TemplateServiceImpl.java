@@ -13,9 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * Created by caim6 on 01.12.2015.
- */
+
 @Service("templateService")
 public class TemplateServiceImpl implements TemplateService {
     @Autowired

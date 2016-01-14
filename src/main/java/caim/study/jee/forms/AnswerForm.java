@@ -1,8 +1,6 @@
 package caim.study.jee.forms;
 
-/**
- * Created by caim6 on 10.12.2015.
- */
+
 public class AnswerForm implements IForm {
     private Boolean correct = false;
     private String answer;

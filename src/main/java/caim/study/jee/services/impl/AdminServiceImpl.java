@@ -21,10 +21,7 @@ import org.springframework.ui.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Service("adminService")
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class AdminServiceImpl implements AdminService {

@@ -31,10 +31,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Service("commonService")
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class CommonServiceImpl implements CommonService {

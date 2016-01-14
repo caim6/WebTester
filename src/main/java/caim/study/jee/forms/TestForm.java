@@ -1,8 +1,5 @@
 package caim.study.jee.forms;
 
-/**
- * Created by caim6 on 06.12.2015.
- */
 public class TestForm implements IForm {
     private String title;
     private String description;

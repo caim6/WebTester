@@ -5,7 +5,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<div class="container">
+
     <h1> <c:out value="${confirmed}" /></h1>
     <a class="btn-default" href="/login">Go to the start page</a>
-</div>

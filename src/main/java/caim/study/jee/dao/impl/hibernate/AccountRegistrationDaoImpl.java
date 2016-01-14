@@ -5,9 +5,7 @@ import caim.study.jee.entities.AccountRegistration;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
-/**
- * Created by caim6 on 11.11.2015.
- */
+
 @Repository("hibernateAccountRedistrationDao")
 @SuppressWarnings("unchecked")
 public class AccountRegistrationDaoImpl extends AbstractEntityDao<AccountRegistration> implements AccountRegistrationDao {

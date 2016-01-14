@@ -8,10 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Repository("hibernateAccountDao")
 @SuppressWarnings("unchecked")
 public class AccountDaoImpl extends AbstractEntityDao<Account> implements AccountDao {

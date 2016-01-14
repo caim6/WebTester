@@ -1,11 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 24.12.2015
-  Time: 14:52
-  To change this template use File | Settings | File Templates.
---%>
+
 <jsp:include page="advancedTutorTemplate.jsp"></jsp:include>
 
     <h1>Answer</h1>

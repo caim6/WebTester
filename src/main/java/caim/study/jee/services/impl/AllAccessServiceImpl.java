@@ -7,9 +7,7 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by caim6 on 06.12.2015.
- */
+
 @Service("AllAccessService")
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class AllAccessServiceImpl implements AllAccessService {

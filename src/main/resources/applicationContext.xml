@@ -7,8 +7,8 @@
         xmlns:mvc="http://www.springframework.org/schema/mvc"
         xmlns:context="http://www.springframework.org/schema/context"
 	   	xmlns:security="http://www.springframework.org/schema/security"
-	   
-        xsi:schemaLocation="http://www.springframework.org/schema/context 
+
+        xsi:schemaLocation="http://www.springframework.org/schema/context
         					http://www.springframework.org/schema/context/spring-context-3.0.xsd
         					http://www.springframework.org/schema/beans 
         					http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
@@ -29,27 +29,26 @@
         </property>
     </bean>
 
-    <context:component-scan base-package="nedis.study.jee.components.impl"/>
-    <context:component-scan base-package="nedis.study.jee.dao.impl.hibernate"/>
-    <!--context:component-scan base-package="nedis.study.jee.dao.impl.jpa"/-->
-    <context:component-scan base-package="nedis.study.jee.services.impl"/>
-    <context:component-scan base-package="nedis.study.jee.controllers"/>
-    
-    <mvc:resources mapping="/resources/**" location="/resources/**" />
-	<mvc:resources mapping="/favicon.ico" location="/favicon.ico" />
-	
+    <context:component-scan base-package="caim.study.jee.components.impl"/>
+    <context:component-scan base-package="caim.study.jee.dao.impl.hibernate"/>
+    <context:component-scan base-package="caim.study.jee.services.impl"/>
+    <context:component-scan base-package="caim.study.jee.controllers"/>
+
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
+	<mvc:resources location="/favicon.ico" mapping="/favicon.ico"/>
+
 	<mvc:annotation-driven />
-	
+
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/JSP/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
+
 	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <property name="basename" value="classpath:message" />
+		<property name="basename" value="classpath:/message"/>
         <property name="defaultEncoding" value="UTF-8" />
     </bean>
-	
+
 	<bean id="dataSource" class="org.postgresql.jdbc2.optional.PoolingDataSource">
         <property name="dataSourceName" value="htppl-ds" />
         <property name="serverName" value="${db.serverName}" />
@@ -73,7 +72,7 @@
 			</props>
 		</property>
 	</bean>
-	
+
     <bean name="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:/hibernate.cfg.xml"/>
         <property name="dataSource" ref="dataSource"/>
@@ -84,14 +83,14 @@
     </bean>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
-    
+
     <!-- ======================================================================================= -->
 	<!-- =================   				Security settings    			==================== -->
 	<!-- ======================================================================================= -->
-	
-	<context:component-scan base-package="nedis.study.jee.security"/>
-	
-    <security:http use-expressions="true" auto-config="true" >		
+
+	<context:component-scan base-package="caim.study.jee.security"/>
+
+    <security:http use-expressions="true" auto-config="true" >
 		<security:intercept-url pattern="/login" 				access="permitAll" />
 		<security:intercept-url pattern="/fromfb" 		     	access="permitAll" />
 		<security:intercept-url pattern="/forget" 				access="permitAll" />
@@ -107,27 +106,27 @@
 		<security:intercept-url pattern="/tutor/**" 			access="hasRole('TUTOR')" />
 		<security:intercept-url pattern="/advanced_tutor/**" 	access="hasRole('ADVANCED_TUTOR')" />
 		<security:intercept-url pattern="/**" 					access="hasRole('STUDENT')" />
-		<security:form-login 
+		<security:form-login
 				login-page="/login"
-				authentication-failure-url="/loginFailed" 
+				authentication-failure-url="/loginFailed"
 				default-target-url="/myInfo"
 				login-processing-url="/loginHandler" />
-		<security:logout 
+		<security:logout
 		    	logout-success-url="/login"
-		    	invalidate-session="true" 
-		    	delete-cookies="JSESSIONID" 
+		    	invalidate-session="true"
+		    	delete-cookies="JSESSIONID"
 		    	logout-url="/logout" />
 		<security:remember-me key="testOnlineKey" token-repository-ref="tokenRepository" />
-		
+
 		<!--<security:session-management session-fixation-protection="migrateSession"
 								invalid-session-url="/invalidSession">
 			<security:concurrency-control 
 				max-sessions="1" 
 				expired-url="/sessionExpired" />
 		</security:session-management>-->
-		
+
 	</security:http>
-	
+
 	<bean id="simpleUrlAuthenticationSuccessHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
     	<property name="defaultTargetUrl" value="/myInfo"/>
     	<property name="targetUrlParameter" value="url"/>
@@ -140,11 +139,11 @@
 			<security:password-encoder ref="pwdEncoder" />
 		</security:authentication-provider>
 	</security:authentication-manager-->
-	
+
 	<security:authentication-manager>
 		<security:authentication-provider ref="customAuthenticationProvider" />
 	</security:authentication-manager>
-	
+
 	<bean id="tokenRepository" class="org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl">
         <property name="dataSource" ref="dataSource" />
     </bean>

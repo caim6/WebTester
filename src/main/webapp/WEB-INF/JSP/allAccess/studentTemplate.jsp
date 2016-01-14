@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: caim6
-  Date: 24.12.2015
-  Time: 19:25
-  To change this template use File | Settings | File Templates.
---%>
+
 <ul class="nav nav-tabs" role="tablist">
     <li><a href="/home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
     <li><a href="/tests" aria-controls="Users list" role="tab" data-toggle="tab">Testing</a></li>

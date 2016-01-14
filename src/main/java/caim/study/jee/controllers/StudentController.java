@@ -18,10 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 @Controller
 public class StudentController extends AbstractController {
     @Autowired

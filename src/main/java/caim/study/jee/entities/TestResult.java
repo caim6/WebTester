@@ -3,12 +3,14 @@ package caim.study.jee.entities;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
+
 /**
- * Created by caim6 on 11.11.2015.
+ * The persistent class for the account database table.
  */
 
+
 @Entity
-@Table(name = "test_result", schema = "xgbua_web_tester")
+@Table(name = "test_result")
 public class TestResult {
     private static final long serialVersionUID = 1L;
 

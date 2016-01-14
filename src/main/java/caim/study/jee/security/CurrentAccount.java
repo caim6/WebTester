@@ -4,10 +4,7 @@ import caim.study.jee.entities.Account;
 
 import org.springframework.security.core.userdetails.User;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public class CurrentAccount extends User{
 	private static final long serialVersionUID = 8252540687900090175L;
 	private final long idAccount;

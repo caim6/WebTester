@@ -1,10 +1,7 @@
 package caim.study.jee.forms;
 
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public class LoginForm extends AbstractLoginForm {
 	private static final long serialVersionUID = -8737364475275749590L;
 

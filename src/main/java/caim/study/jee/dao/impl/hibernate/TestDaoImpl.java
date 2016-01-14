@@ -7,9 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * Created by caim6 on 08.11.2015.
- */
 @Repository("hibernateTestDao")
 @SuppressWarnings("unchecked")
 public class TestDaoImpl extends AbstractEntityDao<Test> implements TestDao {

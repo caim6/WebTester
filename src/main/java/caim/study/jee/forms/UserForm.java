@@ -1,8 +1,5 @@
 package caim.study.jee.forms;
 
-/**
- * Created by caim6 on 30.11.2015.
- */
 public class UserForm extends AbstractLoginForm implements IForm {
     private static final long serialVersionUID = -3633827335080843887L;
 

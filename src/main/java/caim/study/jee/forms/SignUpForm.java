@@ -3,10 +3,6 @@ package caim.study.jee.forms;
 
 import caim.study.jee.entities.Account;
 
-/**
- * @author nedis
- * @version 1.0
- */
 public class SignUpForm extends AbstractLoginForm implements IForm {
     private static final long serialVersionUID = -3633827335080843887L;
 

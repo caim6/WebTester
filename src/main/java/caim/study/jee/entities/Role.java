@@ -17,7 +17,7 @@ import javax.persistence.Transient;
  * 
  */
 @Entity
-@Table(name="role", schema = "xgbua_web_tester")
+@Table(name="role")
 public class Role extends AbstractEntity {
 	private static final long serialVersionUID = 1L;
 

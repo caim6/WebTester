@@ -7,10 +7,7 @@ import org.springframework.ui.Model;
 
 import java.util.List;
 
-/**
- * @author nedis
- * @version 1.0
- */
+
 public interface AdminService {
 
      List<Account> loadAllUser();

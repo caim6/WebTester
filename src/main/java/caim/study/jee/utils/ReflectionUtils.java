@@ -11,11 +11,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 
- * @author nedis
- * @version 1.0
- */
+
 public class ReflectionUtils {
 	private static WeakReference<Map<Class<?>, List<Field>>> NOT_STATIC_FIELDS_MAP = 
 			new WeakReference<Map<Class<?>,List<Field>>>(new HashMap<Class<?>, List<Field>>());;

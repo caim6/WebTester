@@ -1,19 +1,14 @@
 package caim.study.jee.listeners;
 
+import caim.study.jee.services.ConfigApplicationService;
+import org.apache.log4j.Logger;
+import org.springframework.web.context.WebApplicationContext;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
-import caim.study.jee.services.ConfigApplicationService;
 
-import org.apache.log4j.Logger;
-import org.springframework.web.context.WebApplicationContext;
-
-/**
- * 
- * @author nedis
- * @version 1.0
- */
 public class InitContextListener implements ServletContextListener {
 	private static final Logger LOGGER = Logger.getLogger(InitContextListener.class);
 	protected WebApplicationContext getWebApplicationContext(ServletContextEvent event){
