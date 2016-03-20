@@ -16,11 +16,7 @@ public class ReflectionUtils {
 	private static WeakReference<Map<Class<?>, List<Field>>> NOT_STATIC_FIELDS_MAP = 
 			new WeakReference<Map<Class<?>,List<Field>>>(new HashMap<Class<?>, List<Field>>());;
 	
-	/**
-	 * Method getCachedAccessibleFields.
-	 * @param clazz Class<?>
 	
-	 * @return List<Field> */
 	private static List<Field> getCachedAccessibleFields(Class<?> clazz) {
 		Map<Class<?>,List<Field>> map = NOT_STATIC_FIELDS_MAP.get();
 		if(map == null) {
@@ -45,11 +41,7 @@ public class ReflectionUtils {
 		return res;
 	}
 	
-	/**
-	 * Method getAllNotStaticAccessibleFields0.
-	 * @param clazz Class<?>
 	
-	 * @return List<Field> */
 	private static List<Field> getAllNotStaticAccessibleFields0(Class<?> clazz){
 		List<Field> res = getAllDeclaredFields(clazz);
 		Iterator<Field> it = res.iterator();
@@ -65,12 +57,7 @@ public class ReflectionUtils {
 		return res;
 	}
 	
-	/**
-	 * Method addFields.
-	 * @param list List<Field>
-	 * @param clazz Class<?>
-	
-	 * @return List<Field> */
+
 	private static List<Field> addFields(List<Field> list, Class<?> clazz) {
 		list.addAll(Arrays.asList(clazz.getDeclaredFields()));
 		if(clazz.getSuperclass() == Object.class || clazz.getSuperclass() == null) {
@@ -80,35 +67,18 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method getAllDeclaredFields.
-	 * @param clazz Class<?>
-	
-	 * @return List<Field> */
+
 	public static List<Field> getAllDeclaredFields(Class<?> clazz) {
 		List<Field> list = new ArrayList<Field>();
 		return addFields(list, clazz);
 	}
 	
-	/**
-	 * Method getAllNotStaticAccessibleFields.
-	 * @param clazz Class<?>
-	
-	 * @return List<Field> */
+
 	public static List<Field> getAllNotStaticAccessibleFields(Class<?> clazz){
 		return getCachedAccessibleFields(clazz);
 	}
 	
-	/**
-	 * Method getAccessibleField.
-	 * @param clazz Class<?>
-	 * @param fieldName String
-	
-	
-	
-	 * @return Field * @throws SecurityException * @throws NoSuchFieldException * @throws SecurityException
-	 * @throws NoSuchFieldException
-	 */
+
 	public static Field getAccessibleField(Class<?> clazz, String fieldName) throws SecurityException, NoSuchFieldException {
 		Class<?> cl = clazz;
 		while(true) {
@@ -126,12 +96,7 @@ public class ReflectionUtils {
 		throw new NoSuchFieldException(fieldName+" for "+clazz.getName()+" class");
 	}
 	
-	/**
-	 * Method getField.
-	 * @param fs List<Field>
-	 * @param name String
-	
-	 * @return Field */
+
 	public static Field getField(List<Field> fs, String name) {
 		for(Field f : fs) {
 			if(f.getName().equals(name)) {
@@ -141,13 +106,7 @@ public class ReflectionUtils {
 		return null;
 	}
 	
-	/**
-	 * Method copyByFields.
-	 * @param srcFields List<Field>
-	 * @param destFields List<Field>
-	 * @param dest Object
-	 * @param src Object
-	 */
+
 	public static void copyByFields(List<Field> srcFields, List<Field> destFields, Object dest, Object src) {
 		for(Field f : srcFields) {
 			Field destField = getField(destFields, f.getName());
@@ -161,39 +120,15 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * 
-	 * @author nedis
-	 * @version 1.0
-	 */
+
 	public static interface IObjectConverter {
-		/**
-		 * Method convert.
-		 * @param source Object
-		 * @param destClass Class<?>
-		
-		
-		 * @return Object * @throws IllegalArgumentException * @throws IllegalArgumentException
-		 */
+	
 		Object convert (Object source, Class<?> destClass) throws IllegalArgumentException;
 	}
 	
-	/**
-	 * 
-	 * @author nedis
-	 * @version 1.0
-	 */
+
 	private static final class SimpleConverter implements IObjectConverter {
-		/**
-		 * Method convert.
-		 * @param source Object
-		 * @param destClass Class<?>
 		
-		
-		
-		 * @return Object * @throws IllegalArgumentException * @see nedis.htppl.core.utils.ReflectionUtils$IObjectConverter#convert(Object, Class<?>) * @throws IllegalArgumentException
-		 * @see nedis.htppl.core.utils.ReflectionUtils$IObjectConverter#convert(Object, Class<?>)
-		 */
 		@Override
 		public Object convert(Object source, Class<?> destClass) throws IllegalArgumentException {
 			if(source == null) {
@@ -210,13 +145,7 @@ public class ReflectionUtils {
 		}	
 	}
 	
-	/**
-	 * Method copyBeans.
-	 * @param destBean Object
-	 * @param sourceBean Object
-	 * @param withNullValues boolean
-	 * @param converter IObjectConverter
-	 */
+	
 	public static void copyBeans (Object destBean, Object sourceBean, boolean withNullValues, IObjectConverter converter) {
 		Method [] methods = destBean.getClass().getMethods();
 		for (Method setter : methods) {
@@ -259,34 +188,18 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method copyBeans.
-	 * @param destBean Object
-	 * @param sourceBean Object
-	 * @param withNullValues boolean
-	 */
+
 	public static void copyBeans (Object destBean, Object sourceBean, boolean withNullValues) {
 		copyBeans(destBean, sourceBean, withNullValues, new SimpleConverter());
 	}
-	
-	/**
-	 * Method copyByFields.
-	 * @param dest Object
-	 * @param src Object
-	 */
+
 	public static void copyByFields(Object dest, Object src) {
 		List<Field> srcFields = getCachedAccessibleFields(src.getClass());
 		List<Field> destFields = getCachedAccessibleFields(dest.getClass());
 		copyByFields(srcFields, destFields, dest, src);
 	}
 	
-	/**
-	 * Method copyByNotNullFields.
-	 * @param srcFields List<Field>
-	 * @param destFields List<Field>
-	 * @param dest Object
-	 * @param src Object
-	 */
+
 	public static void copyByNotNullFields(List<Field> srcFields, List<Field> destFields, Object dest, Object src) {
 		for(Field f : srcFields) {
 			Field destField = getField(destFields, f.getName());
@@ -303,11 +216,7 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method copyByNotNullFields.
-	 * @param dest Object
-	 * @param src Object
-	 */
+
 	public static void copyByNotNullFields(Object dest, Object src) {
 		List<Field> srcFields = getCachedAccessibleFields(src.getClass());
 		List<Field> destFields = getCachedAccessibleFields(dest.getClass());
@@ -315,12 +224,7 @@ public class ReflectionUtils {
 	}
 	
 	
-	/**
-	 * Method set.
-	 * @param fieldName String
-	 * @param o Object
-	 * @param value Object
-	 */
+
 	public static void set(String fieldName, Object o, Object value) {
 		try {
 			Field f = getAccessibleField(o.getClass(), fieldName);
@@ -333,12 +237,7 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method setFinalField.
-	 * @param fieldName String
-	 * @param o Object
-	 * @param value Object
-	 */
+	
 	public static void setFinalField (String fieldName, Object o, Object value) {
 		try {
 			List<Field> fields = getAllNotStaticAccessibleFields(o.getClass());
@@ -365,12 +264,7 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method set.
-	 * @param f Field
-	 * @param o Object
-	 * @param value Object
-	 */
+	
 	public static void set(Field f, Object o, Object value) {
 		try {
 			f.set(o, value);
@@ -379,12 +273,7 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method getValue.
-	 * @param o Object
-	 * @param fieldName String
-	
-	 * @return Object */
+
 	public static Object getValue (Object o, String fieldName) {
 		try {
 			Field f = getAccessibleField(o.getClass(), fieldName);
@@ -394,12 +283,7 @@ public class ReflectionUtils {
 		}
 	}
 	
-	/**
-	 * Method get.
-	 * @param f Field
-	 * @param o Object
 	
-	 * @return Object */
 	public static Object get(Field f, Object o) {
 		try {
 			return f.get(o);
